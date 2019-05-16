@@ -15,8 +15,8 @@ public class PoetryLibrary implements IObtainPoems {
 	public String[] getMePoems(String language) {
 		if ("de".equals(language)) {
 			return new String[] {
-					"DER PANTHER\nIM JARDIN DES PLANTES, PARIS\n\nSein Blick ist vom Vor\u00fcbergehn der St\u00e4be\nso m\u00fcd geworden, dass er nichts mehr h\u00e4lt.\nIhm ist, als ob es tausend St\u00e4be g\u00e4be\nund hinter tausend St\u00e4ben keine Welt.\n\nDer weiche Gang geschmeidig starker Schritte,\nder sich im allerkleinsten Kreise dreht,\nist wie ein Tanz von Kraft um eine Mitte,\nin der bet\u00e4ubt ein groﬂer Wille steht.\n\nNur manchmal schiebt der Vorhang der Pupille\nsich lautlos auf ñ. Dann geht ein Bild hinein,\ngeht durch der Glieder angespannte Stille ñ\nund h\u00f6rt im Herzen auf zu sein.\n\n\n--'Der Panther' von Rainer Maria Rilke",
-					"Ich sitze am Straﬂenrand\nDer Fahrer wechselt das Rad.\nIch bin nicht gern, wo ich herkomme.\nIch bin nicht gern, wo ich hinfahre.\nWarum sehe ich den Radwechsel\nMit Ungeduld?\n\n\n--'Der Radwechsel' von Bertold Brecht" };
+					"DER PANTHER\nIM JARDIN DES PLANTES, PARIS\n\nSein Blick ist vom Vor\u00fcbergehn der St\u00e4be\nso m\u00fcd geworden, dass er nichts mehr h\u00e4lt.\nIhm ist, als ob es tausend St\u00e4be g\u00e4be\nund hinter tausend St\u00e4ben keine Welt.\n\nDer weiche Gang geschmeidig starker Schritte,\nder sich im allerkleinsten Kreise dreht,\nist wie ein Tanz von Kraft um eine Mitte,\nin der bet\u00e4ubt ein gro\u00dfer Wille steht.\n\nNur manchmal schiebt der Vorhang der Pupille\nsich lautlos auf. Dann geht ein Bild hinein,\ngeht durch der Glieder angespannte Stille\nund h\u00f6rt im Herzen auf zu sein.\n\n\n--'Der Panther' von Rainer Maria Rilke",
+					"Ich sitze am Stra\u00dfenrand\nDer Fahrer wechselt das Rad.\nIch bin nicht gern, wo ich herkomme.\nIch bin nicht gern, wo ich hinfahre.\nWarum sehe ich den Radwechsel\nMit Ungeduld?\n\n\n--'Der Radwechsel' von Bertold Brecht" };
 
 		} else { 
 			return new String[] {
