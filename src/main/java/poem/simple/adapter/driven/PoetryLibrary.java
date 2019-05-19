@@ -1,4 +1,4 @@
-package poem.simple.drivenadapter;
+package poem.simple.adapter.driven;
 
 import poem.boundary.port.driven.IObtainPoems;
 

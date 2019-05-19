@@ -1,4 +1,4 @@
-package poem.simple.drivenadapter;
+package poem.simple.adapter.driven;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package poem.simple.driveradapter;
+package poem.simple.adapter.driver;
 
 import poem.boundary.port.driver.IReactToCommands;
 import poem.command.AskForPoem;
