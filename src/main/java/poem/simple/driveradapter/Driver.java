@@ -1,7 +1,7 @@
 package poem.simple.driveradapter;
 
-import poem.hexagon.boundary.command.AskForPoem;
-import poem.hexagon.boundary.driverport.IReactToCommands;
+import poem.boundary.port.driver.IReactToCommands;
+import poem.command.AskForPoem;
 
 /**
  * The driver adapter. It's on the left side of the hexagon. It sends user

@@ -1,6 +1,6 @@
 package poem.simple;
 
-import poem.hexagon.boundary.Boundary;
+import poem.boundary.Boundary;
 import poem.simple.drivenadapter.ConsoleWriter;
 import poem.simple.drivenadapter.PoetryLibrary;
 import poem.simple.driveradapter.Driver;

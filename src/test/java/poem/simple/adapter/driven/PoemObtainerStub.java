@@ -1,6 +1,6 @@
-package poem.simple.drivenadapter;
+package poem.simple.adapter.driven;
 
-import poem.hexagon.boundary.drivenport.IObtainPoems;
+import poem.boundary.port.driven.IObtainPoems;
 
 public class PoemObtainerStub implements IObtainPoems {
 	public static final String ENGLISH_POEM = "Random english poem.";

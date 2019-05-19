@@ -1,4 +1,4 @@
-package poem.hexagon.internal.domain;
+package poem.boundary.internal.domain;
 
 import java.util.List;
 import java.util.Objects;

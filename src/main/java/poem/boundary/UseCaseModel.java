@@ -1,10 +1,10 @@
-package poem.hexagon.boundary;
+package poem.boundary;
 
 import java.util.function.Consumer;
 
 import org.requirementsascode.Model;
 
-import poem.hexagon.boundary.command.AskForPoem;
+import poem.command.AskForPoem;
 
 /**
  * The use case model ties each type of command to its appropriate command

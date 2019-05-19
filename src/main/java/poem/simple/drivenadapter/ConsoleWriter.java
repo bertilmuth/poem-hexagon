@@ -2,7 +2,7 @@ package poem.simple.drivenadapter;
 
 import java.util.Objects;
 
-import poem.hexagon.boundary.drivenport.IWriteLines;
+import poem.boundary.port.driven.IWriteLines;
 
 /**
  * Right-side, driven adapter for writing text to the console.

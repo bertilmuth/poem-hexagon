@@ -1,14 +1,14 @@
-package poem.hexagon.boundary;
+package poem.boundary;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
 
-import poem.hexagon.boundary.Boundary;
-import poem.hexagon.boundary.command.AskForPoem;
-import poem.simple.drivenadapter.LineWriterStub;
-import poem.simple.drivenadapter.PoemObtainerStub;
+import poem.boundary.Boundary;
+import poem.command.AskForPoem;
+import poem.simple.adapter.driven.LineWriterStub;
+import poem.simple.adapter.driven.PoemObtainerStub;
 
 public class BoundaryTest {
 	private static final String EXPECTED_ENGLISH_POEM = PoemObtainerStub.ENGLISH_POEM;

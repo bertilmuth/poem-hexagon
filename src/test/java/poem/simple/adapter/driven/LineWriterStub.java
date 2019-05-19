@@ -1,6 +1,6 @@
-package poem.simple.drivenadapter;
+package poem.simple.adapter.driven;
 
-import poem.hexagon.boundary.drivenport.IWriteLines;
+import poem.boundary.port.driven.IWriteLines;
 
 public class LineWriterStub implements IWriteLines {
 	private String[] lines;
