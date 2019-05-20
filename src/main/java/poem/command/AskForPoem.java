@@ -4,9 +4,6 @@ package poem.command;
  * Command object representing the user request for a poem in a certain
  * language. Supported languages are: "de" for German, "en" for English.
  * 
- * Inspired by a talk by A. Cockburn and T. Pierrain on hexagonal architecture:
- * https://www.youtube.com/watch?v=th4AgBcrEHA
- * 
  * @author b_muth
  *
  */

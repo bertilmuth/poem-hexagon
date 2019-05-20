@@ -3,12 +3,12 @@ package poem.simple;
 import poem.boundary.Boundary;
 import poem.simple.adapter.driven.ConsoleWriter;
 import poem.simple.adapter.driven.HardcodedPoemLibrary;
-import poem.simple.adapter.driver.Driver;
+import poem.simple.adapter.driver.SimulatedUser;
 
 /**
  * Main class that starts the hexagon example application.
  * 
- * Inspired by a talk by A. Cockburn and T. Pierrain on hexagonal architecture:
+ * The application is inspired by a talk by A. Cockburn and T. Pierrain on hexagonal architecture:
  * https://www.youtube.com/watch?v=th4AgBcrEHA
  * 
  * @author b_muth
@@ -28,6 +28,6 @@ public class Main {
 		Boundary boundary = new Boundary(poemLibrary, consoleWriter);
 
 		// Start the driver adapter for the application
-		new Driver(boundary).run();
+		new SimulatedUser(boundary).run();
 	}
 }

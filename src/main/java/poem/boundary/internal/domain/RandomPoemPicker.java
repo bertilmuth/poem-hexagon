@@ -8,9 +8,6 @@ import java.util.Random;
 /**
  * Picks a random poem from a list of poems.
  * 
- * Inspired by a talk by A. Cockburn and T. Pierrain on hexagonal architecture:
- * https://www.youtube.com/watch?v=th4AgBcrEHA
- * 
  * @author b_muth
  *
  */

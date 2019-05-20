@@ -19,9 +19,6 @@ import poem.boundary.port.driver.IReactToCommands;
  * of the use case model. The model runner then dispatches the command to the
  * appropriate command handler, which in turn calls the driven adapters.
  * 
- * Inspired by a talk by A. Cockburn and T. Pierrain on hexagonal architecture:
- * https://www.youtube.com/watch?v=th4AgBcrEHA
- * 
  * @author b_muth
  *
  */
