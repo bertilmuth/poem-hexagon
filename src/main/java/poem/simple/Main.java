@@ -2,7 +2,7 @@ package poem.simple;
 
 import poem.boundary.Boundary;
 import poem.simple.adapter.driven.ConsoleWriter;
-import poem.simple.adapter.driven.PoetryLibrary;
+import poem.simple.adapter.driven.HardcodedPoemLibrary;
 import poem.simple.adapter.driver.Driver;
 
 /**
@@ -21,11 +21,11 @@ public class Main {
 
 	private void startApplication() {
 		// Instantiate driven, right-side adapters
-		PoetryLibrary poetryLibrary = new PoetryLibrary();
+		HardcodedPoemLibrary poemLibrary = new HardcodedPoemLibrary();
 		ConsoleWriter consoleWriter = new ConsoleWriter();
 
 		// Inject driven adapters into boundary
-		Boundary boundary = new Boundary(poetryLibrary, consoleWriter);
+		Boundary boundary = new Boundary(poemLibrary, consoleWriter);
 
 		// Start the driver adapter for the application
 		new Driver(boundary).run();

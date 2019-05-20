@@ -11,7 +11,7 @@ import poem.boundary.port.driven.IObtainPoems;
  * @author b_muth
  * 
  */
-public class PoetryLibrary implements IObtainPoems {
+public class HardcodedPoemLibrary implements IObtainPoems {
 	public String[] getMePoems(String language) {
 		if ("de".equals(language)) {
 			return new String[] {
