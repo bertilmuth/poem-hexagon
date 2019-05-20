@@ -1,9 +1,9 @@
 package poem.simple;
 
 import poem.boundary.Boundary;
-import poem.simple.adapter.driven.ConsoleWriter;
-import poem.simple.adapter.driven.HardcodedPoemLibrary;
-import poem.simple.adapter.driver.SimulatedUser;
+import poem.simple.driven_adapter.ConsoleWriter;
+import poem.simple.driven_adapter.HardcodedPoemLibrary;
+import poem.simple.driver_adapter.SimulatedUser;
 
 /**
  * Main class that starts the hexagon example application.

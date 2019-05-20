@@ -1,6 +1,6 @@
-package poem.simple.adapter.driver;
+package poem.simple.driver_adapter;
 
-import poem.boundary.port.driver.IReactToCommands;
+import poem.boundary.driver_port.IReactToCommands;
 import poem.command.AskForPoem;
 
 /**
@@ -21,7 +21,6 @@ public class SimulatedUser {
 
 	public void run() {
 		driverPort.reactTo(new AskForPoem("en"));
-		System.out.println("");
 		driverPort.reactTo(new AskForPoem("de"));
 	}
 }

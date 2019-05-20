@@ -3,10 +3,10 @@ package poem.boundary;
 import org.requirementsascode.Model;
 import org.requirementsascode.ModelRunner;
 
-import poem.boundary.internal.commandhandler.DisplayRandomPoem;
-import poem.boundary.port.driven.IObtainPoems;
-import poem.boundary.port.driven.IWriteLines;
-import poem.boundary.port.driver.IReactToCommands;
+import poem.boundary.driven_port.IObtainPoems;
+import poem.boundary.driven_port.IWriteLines;
+import poem.boundary.driver_port.IReactToCommands;
+import poem.boundary.internal.command_handler.DisplayRandomPoem;
 
 /**
  * The boundary class is the only point of communication with left-side driver

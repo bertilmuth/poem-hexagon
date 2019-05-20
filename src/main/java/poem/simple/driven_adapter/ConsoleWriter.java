@@ -1,8 +1,8 @@
-package poem.simple.adapter.driven;
+package poem.simple.driven_adapter;
 
 import java.util.Objects;
 
-import poem.boundary.port.driven.IWriteLines;
+import poem.boundary.driven_port.IWriteLines;
 
 /**
  * Right-side, driven adapter for writing text to the console.
@@ -16,5 +16,6 @@ public class ConsoleWriter implements IWriteLines {
 		for (String line : lines) {
 			System.out.println(line);
 		}
+		System.out.println("");
 	}
 }

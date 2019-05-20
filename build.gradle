@@ -1,5 +1,5 @@
 group = 'org.requirementsascode'
-version = '0.2'
+version = '0.3'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'

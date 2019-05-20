@@ -1,6 +1,6 @@
-package poem.simple.adapter.driven;
+package poem.simple.driven_adapter;
 
-import poem.boundary.port.driven.IObtainPoems;
+import poem.boundary.driven_port.IObtainPoems;
 
 /**
  * Right-side, driven adapter that acts as repository for poems.

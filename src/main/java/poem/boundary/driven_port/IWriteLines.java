@@ -1,4 +1,4 @@
-package poem.boundary.port.driven;
+package poem.boundary.driven_port;
 
 /**
  * Driven, right side port for writing the lines of a poem to an output device

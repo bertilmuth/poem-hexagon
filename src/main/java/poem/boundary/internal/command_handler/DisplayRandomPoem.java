@@ -1,4 +1,4 @@
-package poem.boundary.internal.commandhandler;
+package poem.boundary.internal.command_handler;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
+import poem.boundary.driven_port.IObtainPoems;
+import poem.boundary.driven_port.IWriteLines;
 import poem.boundary.internal.domain.Poem;
 import poem.boundary.internal.domain.RandomPoemPicker;
-import poem.boundary.port.driven.IObtainPoems;
-import poem.boundary.port.driven.IWriteLines;
 import poem.command.AskForPoem;
 
 /**
