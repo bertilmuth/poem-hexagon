@@ -8,4 +8,4 @@ The main class is [poem.simple.Main](https://github.com/bertilmuth/poem-hexagon/
 
 This example is inspired by a [talk](https://www.youtube.com/watch?v=th4AgBcrEHA) by A. Cockburn and T. Pierrain on hexagonal architecture.
 
-A [blog article](dev.to/bertilmuth/implementing-a-hexagonal-architecture-1kgf) describes the details.
+A [blog article](https://dev.to/bertilmuth/implementing-a-hexagonal-architecture-1kgf) describes the details.
