@@ -26,19 +26,19 @@ public class BoundaryTest {
 
 	@Test
 	public void englishPoem() throws Exception {
-		boundary.reactTo(new AskForPoem("en", System.out));
+		boundary.reactTo(new AskForPoem("en"));
 		assertPoemIs(EXPECTED_ENGLISH_POEM);
 	}
 
 	@Test
 	public void englishPoemWhenUnknownLanguage() throws Exception {
-		boundary.reactTo(new AskForPoem("fr", System.out));
+		boundary.reactTo(new AskForPoem("fr"));
 		assertPoemIs(EXPECTED_ENGLISH_POEM);
 	}
 
 	@Test
 	public void germanPoem() throws Exception {
-		boundary.reactTo(new AskForPoem("de", System.out));
+		boundary.reactTo(new AskForPoem("de"));
 		assertPoemIs(EXPECTED_GERMAN_POEM);
 	}
 

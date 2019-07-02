@@ -6,10 +6,10 @@ public class LineWriterStub implements IWriteLines {
 	private String[] lines;
 
 	@Override
-	public void writeLines(String[] lines, Object systemOutput) {
+	public void writeLines(String[] lines) {
 		this.lines = lines;
 	}
-	
+
 	public String[] getLines() {
 		return lines;
 	}

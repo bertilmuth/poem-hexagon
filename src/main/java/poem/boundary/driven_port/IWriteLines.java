@@ -8,5 +8,5 @@ package poem.boundary.driven_port;
  *
  */
 public interface IWriteLines {
-	void writeLines(String[] strings, Object systemOutput);
+	void writeLines(String[] strings);
 }

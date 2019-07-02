@@ -20,7 +20,7 @@ public class SimulatedUser {
 	}
 
 	public void run() {
-		driverPort.reactTo(new AskForPoem("en", System.out));
-		driverPort.reactTo(new AskForPoem("de", System.out));
+		driverPort.reactTo(new AskForPoem("en"));
+		driverPort.reactTo(new AskForPoem("de"));
 	}
 }
