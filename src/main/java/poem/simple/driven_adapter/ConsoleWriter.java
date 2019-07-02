@@ -1,5 +1,6 @@
 package poem.simple.driven_adapter;
 
+import java.io.PrintStream;
 import java.util.Objects;
 
 import poem.boundary.driven_port.IWriteLines;
@@ -11,11 +12,18 @@ import poem.boundary.driven_port.IWriteLines;
  *
  */
 public class ConsoleWriter implements IWriteLines {
-	public void writeLines(String[] lines) {
+	@Override
+	public void writeLines(String[] lines, Object systemOutput) {
 		Objects.requireNonNull(lines);
-		for (String line : lines) {
-			System.out.println(line);
+
+		if (systemOutput instanceof PrintStream) {
+			PrintStream systemOutputStream = ((PrintStream) systemOutput);
+			for (String line : lines) {
+				systemOutputStream.println(line);
+			}
+			systemOutputStream.println("");
+		} else {
+			throw new IllegalArgumentException("systemOutput must be a PrintStream!");
 		}
-		System.out.println("");
 	}
 }

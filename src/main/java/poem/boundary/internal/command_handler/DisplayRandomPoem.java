@@ -33,7 +33,7 @@ public class DisplayRandomPoem implements Consumer<AskForPoem> {
 	public void accept(AskForPoem askForPoem) {
 		List<Poem> poems = obtainPoems(askForPoem);
 		Optional<Poem> poem = pickRandomPoem(poems);
-		writeLines(poem);		
+		writeLines(poem, askForPoem.getSystemOutput());		
 	}
 
 	private List<Poem> obtainPoems(AskForPoem askForPoem) {
@@ -51,7 +51,7 @@ public class DisplayRandomPoem implements Consumer<AskForPoem> {
 		return randomPoem;
 	}
 	
-	private void writeLines(Optional<Poem> poem) {
-		poem.ifPresent(p -> lineWriter.writeLines(p.getVerses()));
+	private void writeLines(Optional<Poem> poem, Object systemOutput) {
+		poem.ifPresent(p -> lineWriter.writeLines(p.getVerses(), systemOutput));
 	}
 }
