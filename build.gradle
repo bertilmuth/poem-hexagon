@@ -1,5 +1,5 @@
 group = 'org.requirementsascode'
-version = '0.5.1'
+version = '0.5.2'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -21,7 +21,7 @@ jar {
 }
 
 dependencies {
-	compile 'org.requirementsascode:requirementsascodecore:1.2'
+	compile 'org.requirementsascode:requirementsascodecore:1.2.2'
   	testCompile 'junit:junit:4.12'
 }
 repositories {
