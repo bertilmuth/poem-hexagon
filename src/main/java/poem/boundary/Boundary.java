@@ -7,6 +7,7 @@ import poem.boundary.driven_port.IObtainPoems;
 import poem.boundary.driven_port.IWriteLines;
 import poem.boundary.driver_port.IReactToCommands;
 import poem.boundary.internal.command_handler.DisplayRandomPoem;
+import poem.command.AskForPoem;
 
 /**
  * The boundary class is the only point of communication with left-side driver
@@ -23,6 +24,8 @@ import poem.boundary.internal.command_handler.DisplayRandomPoem;
  *
  */
 public class Boundary implements IReactToCommands {
+	private static final Class<AskForPoem> asksForPoem = AskForPoem.class;
+
 	private Model model;
 
 	public Boundary(IObtainPoems poemObtainer, IWriteLines lineWriter) {
@@ -31,11 +34,13 @@ public class Boundary implements IReactToCommands {
 
 	private Model buildModel(IObtainPoems poemObtainer, IWriteLines lineWriter) {
 		// Create the command handler(s)
-		DisplayRandomPoem displayRandomPoem = new DisplayRandomPoem(poemObtainer, lineWriter);
+		DisplayRandomPoem displaysRandomPoem = new DisplayRandomPoem(poemObtainer, lineWriter);
 
-		// Inject command handler(s) into use case model, to tie them to command
-		// types.
-		Model model = UseCaseModel.build(displayRandomPoem);
+		// With a use case model, map classes of command objects to command handlers.
+		Model model = Model.builder()
+			.user(asksForPoem).system(displaysRandomPoem)
+		.build();
+		
 		return model;
 	}
 
