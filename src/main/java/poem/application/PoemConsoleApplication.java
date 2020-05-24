@@ -14,9 +14,9 @@ import poem.driver_adapter.SimulatedUser;
  * @author b_muth
  *
  */
-public class ConsoleApplication {
+public class PoemConsoleApplication {
 	public static void main(String[] args) {
-		new ConsoleApplication().startApplication();
+		new PoemConsoleApplication().startApplication();
 	}
 
 	private void startApplication() {
