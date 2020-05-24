@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'org.requirementsascode'
-version = '0.7.4'
+version = '0.8'
 
 sourceCompatibility = 8
 targetCompatibility = 8

@@ -7,8 +7,8 @@ import org.junit.Test;
 
 import poem.boundary.Boundary;
 import poem.command.AskForPoem;
-import poem.simple.driven_adapter.LineWriterStub;
-import poem.simple.driven_adapter.PoemObtainerStub;
+import poem.driven_adapter.LineWriterStub;
+import poem.driven_adapter.PoemObtainerStub;
 
 public class BoundaryTest {
 	private static final String EXPECTED_ENGLISH_POEM = PoemObtainerStub.ENGLISH_POEM;
