@@ -1,4 +1,4 @@
-package poem.simple.driven_adapter;
+package poem.driven_adapter;
 
 import poem.boundary.driven_port.IWriteLines;
 

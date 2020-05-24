@@ -1,9 +1,9 @@
-package poem.simple;
+package poem.application;
 
 import poem.boundary.Boundary;
-import poem.simple.driven_adapter.ConsoleWriter;
-import poem.simple.driven_adapter.HardcodedPoemLibrary;
-import poem.simple.driver_adapter.SimulatedUser;
+import poem.driven_adapter.ConsoleWriter;
+import poem.driven_adapter.HardcodedPoemLibrary;
+import poem.driver_adapter.SimulatedUser;
 
 /**
  * Main class that starts the hexagon example application.
@@ -14,9 +14,9 @@ import poem.simple.driver_adapter.SimulatedUser;
  * @author b_muth
  *
  */
-public class Main {
+public class ConsoleApplication {
 	public static void main(String[] args) {
-		new Main().startApplication();
+		new ConsoleApplication().startApplication();
 	}
 
 	private void startApplication() {
