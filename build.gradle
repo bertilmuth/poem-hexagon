@@ -6,10 +6,13 @@ plugins {
 }
 
 group = 'org.requirementsascode'
-version = '0.7.4'
+version = '0.9'
 
-sourceCompatibility = 8
-targetCompatibility = 8
+compileJava{
+  sourceCompatibility = 8
+  targetCompatibility = 8
+}
+
 
 repositories {
 	mavenCentral()
@@ -23,8 +26,8 @@ jar {
 }
 
 dependencies {
-	implementation 'org.requirementsascode:requirementsascodecore:1.5'
-  	testImplementation 'junit:junit:4.12'
+	implementation 'org.requirementsascode:requirementsascodecore:1.7.1'
+  testImplementation 'junit:junit:4.12'
 }
 repositories {
 	mavenCentral()
