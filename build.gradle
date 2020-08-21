@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'org.requirementsascode'
-version = '1.4'
+version = '1.5'
 
 sourceCompatibility = 8
 targetCompatibility = 8
@@ -23,7 +23,7 @@ jar {
 }
 
 dependencies {
-	implementation 'org.requirementsascode:requirementsascodecore:1.8'
+	implementation 'org.requirementsascode:requirementsascodecore:1.8.2'
   testImplementation 'junit:junit:4.12'
 }
 repositories {
