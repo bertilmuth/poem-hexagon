@@ -1,5 +1,5 @@
 # introduction
-[![Build Status](https://travis-ci.org/bertilmuth/poem-hexagon.svg?branch=master)](https://travis-ci.org/bertilmuth/poem-hexagon)
+[![Build Status](https://travis-ci.com/bertilmuth/poem-hexagon.svg?branch=master)](https://travis-ci.com/bertilmuth/poem-hexagon)
 
 A simple example for a clean hexagonal architecture.
 It contains a use case model and command handlers that control the flow of the application.
