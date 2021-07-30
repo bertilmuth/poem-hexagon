@@ -29,7 +29,7 @@ import poem.command.AskForPoem;
 public class Boundary implements IReactToCommands, BehaviorModel {
   private final IObtainPoems poemObtainer;
   private final IWriteLines lineWriter;
-  private StatelessBehavior behavior;
+  private final StatelessBehavior behavior;
 
   private static final Class<AskForPoem> asksForPoem = AskForPoem.class;
 
