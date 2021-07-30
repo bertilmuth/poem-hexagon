@@ -20,7 +20,7 @@ import poem.command.AskForPoem;
  * command handlers, by injecting the command handlers into a behavior model.
  * 
  * After creation, this class sends each command it receives to the behavior.
- * The behavior then dispatches the command to the appropriate command handler, 
+ * The behavior then dispatches the command to the appropriate command handler,
  * which in turn calls the driven adapters.
  * 
  * @author b_muth
@@ -31,27 +31,27 @@ public class Boundary implements IReactToCommands, BehaviorModel {
   private final IWriteLines lineWriter;
   private StatelessBehavior behavior;
 
-	private static final Class<AskForPoem> asksForPoem = AskForPoem.class;
+  private static final Class<AskForPoem> asksForPoem = AskForPoem.class;
 
-	public Boundary(IObtainPoems poemObtainer, IWriteLines lineWriter) {
-	  this.poemObtainer = poemObtainer;
-	  this.lineWriter = lineWriter;
-		this.behavior = StatelessBehavior.of(this);
-	}
+  public Boundary(IObtainPoems poemObtainer, IWriteLines lineWriter) {
+    this.poemObtainer = poemObtainer;
+    this.lineWriter = lineWriter;
+    this.behavior = StatelessBehavior.of(this);
+  }
 
-	@Override
-	public Model model() {
-		return Model.builder()
-			.user(asksForPoem).system(displaysRandomPoem())
-		.build();
-	}
+  @Override
+  public Model model() {
+    return Model.builder()
+        .user(asksForPoem).system(displaysRandomPoem())
+        .build();
+  }
 
-	@Override
-	public void reactTo(Object commandObject) {
-		behavior.reactTo(commandObject);
-	}
-	
-	private Consumer<AskForPoem> displaysRandomPoem(){
+  @Override
+  public void reactTo(Object commandObject) {
+    behavior.reactTo(commandObject);
+  }
+
+  private Consumer<AskForPoem> displaysRandomPoem() {
     return new DisplayRandomPoem(poemObtainer, lineWriter);
-	}
+  }
 }
