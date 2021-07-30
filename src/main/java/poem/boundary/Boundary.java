@@ -1,7 +1,10 @@
 package poem.boundary;
 
+import java.util.function.Consumer;
+
+import org.requirementsascode.BehaviorModel;
 import org.requirementsascode.Model;
-import org.requirementsascode.ModelRunner;
+import org.requirementsascode.StatelessBehavior;
 
 import poem.boundary.driven_port.IObtainPoems;
 import poem.boundary.driven_port.IWriteLines;
@@ -14,38 +17,41 @@ import poem.command.AskForPoem;
  * adapters. It accepts commands, and calls the appropriate command handler.
  * 
  * On creation, this class wires up the dependencies between command types and
- * command handlers, by injecting the command handlers into a use case model.
+ * command handlers, by injecting the command handlers into a behavior model.
  * 
- * After creation, this class sends each command it receives to the runner of
- * the use case model. The model runner then dispatches the command to the
- * appropriate command handler, which in turn calls the driven adapters.
+ * After creation, this class sends each command it receives to the behavior.
+ * The behavior then dispatches the command to the appropriate command handler, 
+ * which in turn calls the driven adapters.
  * 
  * @author b_muth
  *
  */
-public class Boundary implements IReactToCommands {
+public class Boundary implements IReactToCommands, BehaviorModel {
+  private final IObtainPoems poemObtainer;
+  private final IWriteLines lineWriter;
+  private StatelessBehavior behavior;
+
 	private static final Class<AskForPoem> asksForPoem = AskForPoem.class;
 
-	private Model model;
-
 	public Boundary(IObtainPoems poemObtainer, IWriteLines lineWriter) {
-		model = buildModel(poemObtainer, lineWriter);
+	  this.poemObtainer = poemObtainer;
+	  this.lineWriter = lineWriter;
+		this.behavior = StatelessBehavior.of(this);
 	}
 
-	private Model buildModel(IObtainPoems poemObtainer, IWriteLines lineWriter) {
-		// Create the command handler(s)
-		DisplayRandomPoem displaysRandomPoem = new DisplayRandomPoem(poemObtainer, lineWriter);
-
-		// With a use case model, map classes of command objects to command handlers.
-		Model model = Model.builder()
-			.user(asksForPoem).system(displaysRandomPoem)
+	@Override
+	public Model model() {
+		return Model.builder()
+			.user(asksForPoem).system(displaysRandomPoem())
 		.build();
-		
-		return model;
 	}
 
 	@Override
 	public void reactTo(Object commandObject) {
-		new ModelRunner().run(model).reactTo(commandObject);
+		behavior.reactTo(commandObject);
+	}
+	
+	private Consumer<AskForPoem> displaysRandomPoem(){
+    return new DisplayRandomPoem(poemObtainer, lineWriter);
 	}
 }
