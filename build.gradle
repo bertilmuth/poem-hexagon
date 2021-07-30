@@ -18,7 +18,7 @@ repositories {
 jar {
     manifest {
         attributes 'Implementation-Title': 'poem - hexagon',
-                   'Implementation-Version': version
+                   'Implementation-Version': archiveVersion
 	}
 }
 
